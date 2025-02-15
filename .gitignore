@@ -1,0 +1,17 @@
+*.pth
+*.pt
+*.png
+*.jpg
+*.txt
+*.csv
+*.npy
+*.MP4
+*.mp4
+*.MOV
+*.pdf
+__pycache__
+archive
+demo_datasets
+results
+test
+vis_res
