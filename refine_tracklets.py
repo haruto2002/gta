@@ -663,18 +663,17 @@ def parse_args():
 
 def main():
     args = parse_args()
-    # Determine the process based on the flags
-    # if args.use_split and args.use_connect:
-    #     process = "Split+Connect"
-    # elif args.use_split:
-    #     process = "Split"
-    # elif args.use_connect:
-    #     process = "Connect"
-    # else:
-    #     raise ValueError(
-    #         "Both use_split and use_connect are false, must at least use connect."
-    #     )
-    process = "Split+Connect"
+    Determine the process based on the flags
+    if args.use_split and args.use_connect:
+        process = "Split+Connect"
+    elif args.use_split:
+        process = "Split"
+    elif args.use_connect:
+        process = "Connect"
+    else:
+        raise ValueError(
+            "Both use_split and use_connect are false, must at least use connect."
+        )
 
     seq_tracks_dir = args.track_src
     data_path = os.path.dirname(seq_tracks_dir)
@@ -749,3 +748,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # an example of run command
+    # python refine_tracklets.py --dataset DATASET_NAME --tracker TRACKER_NAME --track_src PATH2PKL --use_split --use_connect
