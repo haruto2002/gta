@@ -58,7 +58,7 @@ def main():
 
         # Update the tracker
         res = tracker.update(dets, frame)  # --> M X (x, y, x, y, id, conf, cls, ind)
-        res = convert_array(res, frame_num)
+        res = convert_array(res, frame_num) # --> M X (<frame>, <id>, <bb_left>, <bb_top>, <bb_width>, <bb_height>, <conf>, <x>, <y>, <z>)
 
         # Plot tracking results on the image
         tracker.plot_results(frame, show_trajectories=True)
